@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  WeatherApp
+
+  Created by Захар on 04/07/18.
+*/
+
+// errors
+serverError         = "Server error";
+somethingWentWrong  = "Something went wrong";
+
+ok                  = "OK";
+error               = "Error";
+cancel              = "Cancel";
+settings            = "Settings";
+noConnection        = "No internet connection";
+info                = "Info";
+done                = "Done";
+delete              = "Delete";
+deleteText          = "Are you sure you want to delete the city ?";
+warning             = "Warning";

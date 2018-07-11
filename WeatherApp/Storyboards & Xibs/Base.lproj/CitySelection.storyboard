@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="euY-KR-WLw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Select city-->
+        <scene sceneID="aKk-iD-YFm">
+            <objects>
+                <tableViewController id="euY-KR-WLw" customClass="CitySelectionTVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="50" id="kNL-h2-Mkh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" red="0.14117647058823529" green="0.16078431372549018" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" misplaced="YES" text="" placeholder="Search" translucent="NO" id="3T5-4I-yoY" customClass="DefaultSearchBar" customModule="WeatherApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="7Ii-sr-mwY" userLabel="Footer">
+                            <rect key="frame" x="0.0" y="653" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PMB-dn-txJ">
+                                    <rect key="frame" x="169" y="6.5" width="37" height="37"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="37" id="KWk-X0-jIN"/>
+                                        <constraint firstAttribute="width" constant="37" id="wZm-ea-J76"/>
+                                    </constraints>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="PMB-dn-txJ" firstAttribute="centerX" secondItem="7Ii-sr-mwY" secondAttribute="centerX" id="KTI-SV-qyR"/>
+                                <constraint firstItem="PMB-dn-txJ" firstAttribute="centerY" secondItem="7Ii-sr-mwY" secondAttribute="centerY" id="QMP-wm-3Os"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CityTableViewCell" id="r8d-GK-TNB" customClass="CityTableViewCell" customModule="WeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="84" width="375" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r8d-GK-TNB" id="W3I-JH-lyQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="euY-KR-WLw" id="Dj2-hY-RP8"/>
+                            <outlet property="delegate" destination="euY-KR-WLw" id="O8n-aQ-wXA"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select city" id="75M-bh-adR" customClass="NavigationItemWithoutBackTitle" customModule="WeatherApp" customModuleProvider="target"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="PMB-dn-txJ" id="Km8-qc-ZDJ"/>
+                        <outlet property="searchBar" destination="3T5-4I-yoY" id="yKo-08-7pF"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ihp-C7-oPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="81"/>
+        </scene>
+    </scenes>
+</document>
